@@ -1,28 +1,60 @@
 {
-    "phones": [
-        {
-            "title": "Nokia",
-            "model": "G400",
-            "5G": true,
-            "id": 1
-        },
-        {
-            "title": "Samsung",
-            "model": "Galaxy Z Fold4",
-            "5G": true,
-            "id": 2
-        },
-        {
-            "title": "Sony",
-            "model": "Xperia 5 IV",
-            "5G": false,
-            "id": 3
-        },
-        {
-            "title": "Xiaomi",
-            "model": "Redmi 9C",
-            "5G": false,
-            "id": 4
-        }
-    ]
+  "phones": [
+    {
+      "title": "samsung",
+      "model": "G400",
+      "year": 2010,
+      "5G": true,
+      "id": 1
+    },
+    {
+      "title": "Samsung",
+      "model": "Galaxy Z Fold4",
+      "year": 2010,
+      "5G": true,
+      "id": 2
+    },
+    {
+      "title": "Sony",
+      "model": "Xperia 5 IV",
+      "year": 2010,
+      "5G": false,
+      "id": 3
+    },
+    {
+      "title": "Xiaomi",
+      "model": "Redmi 9C",
+      "year": 2010,
+      "5G": false,
+      "id": 4
+    },
+    {
+      "brand": "Nokia",
+      "model": "Redmi 9C",
+      "year": 2010,
+      "5G": false,
+      "id": 5
+    },
+    {
+      "brand": "Nokia",
+      "model": "Redmi 9C",
+      "year": 2010,
+      "5G": false,
+      "id": 6
+    },
+    {
+      "title": "Sony",
+      "model": "Xperia 5 IV",
+      "year": 2010,
+      "5G": false,
+      "id": 7
+    },
+    {
+      "title": "Sony",
+      "model": "Xperia 5 IV",
+      "year": 2010,
+      "5G": false,
+      "id": 8
+    }
+  ]
 }
