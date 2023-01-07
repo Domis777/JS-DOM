@@ -1,0 +1,39 @@
+{
+    "phones": [
+        {
+            "brand": "NOKIA",
+            "model": "800C",
+            "year": "2012",
+            "have5G": false,
+            "id": 1
+        },
+        {
+            "brand": "Xiaomi",
+            "model": "12 Pro",
+            "year": "2022",
+            "have5G": true,
+            "id": 2
+        },
+        {
+            "brand": "Samsung",
+            "model": "Galaxy Note 10 Lite",
+            "year": "2020",
+            "have5G": true,
+            "id": 3
+        },
+        {
+            "brand": "Sony",
+            "model": "Xperia XZ Premium",
+            "year": "2017",
+            "have5G": false,
+            "id": 4
+        },
+        {
+            "brand": "TCL",
+            "model": "20 Pro",
+            "year": "2021",
+            "have5G": true,
+            "id": 5
+        }
+    ]
+}

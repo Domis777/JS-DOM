@@ -1,0 +1,18 @@
+{
+  "phones": [
+    {
+      "brand": "NOKIA",
+      "model": "800C",
+      "year": "2012",
+      "have5G": false,
+      "id": 1
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "12 Pro",
+      "year": "2022",
+      "have5G": true,
+      "id": 2
+    }
+  ]
+}
