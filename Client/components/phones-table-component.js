@@ -2,8 +2,10 @@ class PhonesTableComponents{
     htmlElement;
     tbody;
     onDelete;
+    onEdit;
+    editRowID;
 
-    constructor({ phones, onDelete }) {
+    constructor({ phones, onDelete, onEdit }) {
         this.htmlElement = document.createElement('table');
         this.htmlElement.className = 'table bg-gradient border border-secondary border-1 shadow';
         this.htmlElement.innerHTML = `
@@ -20,14 +22,17 @@ class PhonesTableComponents{
         <tbody class="bg-dark text-white align-middle"></tbody>`;
         this.tbody = this.htmlElement.querySelector('tbody');
         this.onDelete = onDelete;
+        this.onEdit = onEdit;
+        this.editRowID = null;
 
-        this.renderPhones(phones);
+        this.renderPhones(phones, null);
     }
 
     createRowHtmlElement = (phone) => {
         const { id, brand, model, year, have5G } = phone;
         const tr = document.createElement('tr');
-        tr.classList.add('bg-edited');
+        const thisRowEdited = id === this.editRowID;
+        if (thisRowEdited) tr.classList.add('bg-warning', 'text-dark');
         tr.innerHTML = `
         <td>${id}</td>
         <td>${brand}</td>
@@ -36,19 +41,31 @@ class PhonesTableComponents{
         <td>${have5G}</td>
         <td>
             <div class="d-flex justify-content-end gap-2 pe-2">
-                <button type="button" class="btn btn-warning"><i class="bi bi-gear"></i></button>
-                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            ${thisRowEdited ? `
+            <button type="button" class="btn btn-secondary js-btn-close">
+            <i class="bi bi-x"></i></i>
+            </button>` : `
+            <button type="button" class="btn btn-warning js-btn-close">
+            <i class="bi bi-gear"></i>
+            </button>`}
+                <button type="button" class="btn btn-danger js-btn-delete"><i class="bi bi-trash"></i></button>
             </div>
         </td>`;
 
-        const deleteButton = tr.querySelector('.btn-danger');
+        const deleteButton = tr.querySelector('.js-btn-delete');
         deleteButton.addEventListener('click', () => this.onDelete(id))
+
+        const updateButton = tr.querySelector('.js-btn-close');
+        updateButton.addEventListener('click', () => this.onEdit(phone))
         
         return tr;
     }
 
-    renderPhones(phones) {
+    renderPhones(phones, editRowID) {
+        this.editRowID = editRowID;
         const rowsHtmlElements = phones.map(this.createRowHtmlElement);
+
+        this.tbody.innerHTML = null
         this.tbody.append(...rowsHtmlElements);
     }
 }

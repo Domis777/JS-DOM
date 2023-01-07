@@ -3,7 +3,7 @@ class FlexContainerComponent {
 
     constructor(){
         this.htmlElement = document.createElement('div');
-        this.htmlElement.classList = 'd-flex gap-3 align-items-start';
+        this.htmlElement.className = 'd-flex gap-3 align-items-start';
     }
 
     addComponents(...components) {

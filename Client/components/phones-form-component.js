@@ -29,14 +29,14 @@ class PhonesFormComponent {
             <input type="checkbox" class="form-check-input" id="have5G" name="have5G">
             <label class="form-check-label" for="have5G">Have 5G</label>
         </div>
-        <button type="submit" class="btn btn-secondary w-100 fw-bold">Create Phone</button>`;
+        <button type="submit" class="btn btn-success w-100 fw-bold">Create Phone</button>`;
         this.onSubmit = onSubmit;
         this.brandInput = this.htmlElement.querySelector('[name=brand]');
         this.modelInput = this.htmlElement.querySelector('[name=model]');
         this.yearInput = this.htmlElement.querySelector('[name=year]');
         this.have5GInput = this.htmlElement.querySelector('[name=have5G]');
         this.formNameElement = this.htmlElement.querySelector('h2');
-        this.createButton = this.htmlElement.querySelector('button');
+        this.submitButton = this.htmlElement.querySelector('button');
 
         this.htmlElement.addEventListener('submit', this.handleSubmit);
     }
@@ -55,6 +55,23 @@ class PhonesFormComponent {
         this.onSubmit(value);
 
         event.target.reset();
+    }
+
+    enableEdit = ({ brand, model, year, have5G }) => {
+        this.brandInput.value = brand;
+        this.modelInput.value = model;
+        this.yearInput.value = year;
+        this.have5GInput.value = have5G;
+        this.formNameElement.innerText = 'Update Phone'
+        this.submitButton.innerText = 'Update Phone'
+        this.submitButton.className = 'btn btn-warning w-100'
+    }
+
+    disableEdit = () => {
+        this.htmlElement.reset();
+        this.formNameElement.innerText = 'Create Phone'
+        this.submitButton.innerText = 'Update Phone'
+        this.submitButton.className = 'btn btn-success w-100'
     }
 }
 
