@@ -4,14 +4,14 @@
   * Node v18.x.y or higher
 
 ## _Instalation_
-Open CLI and run:
+Open console and run:
 ```
   npm install
 ```
 <img src="../npm-install.gif" width="500">
 
 ## _Project launch_
-Open CLI and run:
+Open console and run:
 ```
   npm run server
 ```
