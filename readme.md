@@ -1,7 +1,7 @@
 # __Fullstack CRUD application__
 
 
-CRUD Application files are divided in two folders (__Server and client folders__). Server folder has it's own instructions in [__GitHub readme.md__](https://github.com/Domis777/JS-DOM/blob/master/readme.md) file and [__direct readme.md__](client/readme.md) file.
+CRUD Application files are divided in two folders (__Server and client folders__). Server folder has it's own instructions in [__GitHub readme.md__](https://github.com/Domis777/JS-DOM/blob/master/Server/readme.md) file and [__direct readme.md__](client/readme.md) file.
 
 
 ## __Application example__
