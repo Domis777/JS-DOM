@@ -11,8 +11,8 @@ CRUD Application files are divided in two folders (__Server and client folders__
 
 ## __Requests examples__
 
-Requests examples can be viewed using [Postman](https://www.postman.com/downloads/). Request examples are given in [Postman File](./Phones.postman_collection.json), which can you import in program.
+Requests examples can be viewed using [__Postman__](https://www.postman.com/downloads/). Request examples are given in [__Postman File__](./Phones.postman_collection.json), which can you import in program.
 
 ## __Code View__
 
-You can view code in Visual studio instance using [GitHub dev link](https://github.dev/Domis777/JS-DOM)
+You can view code in Visual studio instance using [__GitHub dev link__](https://github.dev/Domis777/JS-DOM)
